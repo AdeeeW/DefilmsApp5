@@ -29,7 +29,9 @@ android {
         checkReleaseBuilds true
         abortOnError = false
     }
-
+    kapt{
+        generateStubs = true
+    }
     buildTypes {
         release {
             minifyEnabled false

@@ -26,12 +26,14 @@ android {
         checkReleaseBuilds true
         abortOnError = false
     }
-
+    kapt{
+        generateStubs = true
+    }
     buildTypes {
         release {
             minifyEnabled false
         }
-        debug{
+        debug {
             minifyEnabled false
         }
     }
@@ -47,7 +49,7 @@ android {
     }
     dynamicFeatures = [':favorite']
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
