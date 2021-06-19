@@ -25,6 +25,10 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
+    lintOptions {
+        checkReleaseBuilds true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
