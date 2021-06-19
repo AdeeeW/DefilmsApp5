@@ -78,4 +78,9 @@ class FavTvshowFragment : Fragment() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        bindingFavTvShow = null
+    }
 }

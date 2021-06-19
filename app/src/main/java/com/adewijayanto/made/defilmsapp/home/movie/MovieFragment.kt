@@ -1,3 +1,7 @@
+@file:Suppress("KotlinDeprecation", "KotlinDeprecation", "KotlinDeprecation", "KotlinDeprecation",
+    "KotlinDeprecation", "KotlinDeprecation", "RedundantNullableReturnType"
+)
+
 package com.adewijayanto.made.defilmsapp.home.movie
 
 import android.content.Intent
@@ -19,7 +23,8 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MovieFragment : Fragment() {
-    private var binding: FragmentMovieBinding? = null
+    private var _binding: FragmentMovieBinding? = null
+    private val binding get() = _binding!!
 
     private val movieViewModel: MovieViewModel by viewModels()
 
@@ -28,7 +33,7 @@ class MovieFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMovieBinding.inflate(inflater, container, false)
+        _binding = FragmentMovieBinding.inflate(inflater, container, false)
         return binding?.root
     }
 
@@ -83,8 +88,8 @@ class MovieFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        binding = null
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

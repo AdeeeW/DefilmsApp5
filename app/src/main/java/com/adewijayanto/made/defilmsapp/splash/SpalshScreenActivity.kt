@@ -2,16 +2,14 @@ package com.adewijayanto.made.defilmsapp.splash
 
 import android.animation.Animator
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import com.adewijayanto.made.defilmsapp.MainActivity
-import com.adewijayanto.made.defilmsapp.R
-import com.adewijayanto.made.defilmsapp.databinding.ActivityDetailBinding
 import com.adewijayanto.made.defilmsapp.databinding.ActivitySpalshScreenBinding
 import dagger.hilt.android.AndroidEntryPoint
 

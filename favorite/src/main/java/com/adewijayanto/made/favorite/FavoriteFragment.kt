@@ -42,4 +42,9 @@ class FavoriteFragment : Fragment() {
         }
 
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        bindingFav = null
+    }
 }

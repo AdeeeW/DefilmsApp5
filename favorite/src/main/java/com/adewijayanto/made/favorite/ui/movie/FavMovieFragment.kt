@@ -74,4 +74,9 @@ class FavMovieFragment : Fragment() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        bindingFavMovie = null
+    }
 }

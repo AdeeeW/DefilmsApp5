@@ -11,7 +11,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adewijayanto.made.core.data.Resources
 import com.adewijayanto.made.core.ui.ListTvShowAdapter
-import com.adewijayanto.made.defilmsapp.databinding.FragmentMovieBinding
 import com.adewijayanto.made.defilmsapp.databinding.FragmentTvShowBinding
 import com.adewijayanto.made.defilmsapp.detail.DetailActivity
 import com.adewijayanto.made.defilmsapp.detail.DetailActivity.Companion.DATA_TVSHOW
@@ -84,8 +83,8 @@ class TvShowFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         binding = null
     }
 }

@@ -1,7 +1,7 @@
 package com.adewijayanto.made.defilmsapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -10,7 +10,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.adewijayanto.made.defilmsapp.databinding.ActivityMainBinding
-import com.adewijayanto.made.defilmsapp.databinding.ActivitySpalshScreenBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

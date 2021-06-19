@@ -1,3 +1,5 @@
+@file:Suppress("RemoveExplicitTypeArguments")
+
 package com.adewijayanto.made.core.data
 
 import com.adewijayanto.made.core.data.source.remote.network.ApiResponse
