@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menu_movie">
+    <fragment
+        android:id="@+id/menu_movie"
+        android:name="com.adewijayanto.made.defilmsapp.home.movie.MovieFragment"
+        android:label="@string/list_movie"
+        tools:layout="@layout/fragment_movie">
+        <action
+            android:id="@+id/action_movieFragment_to_tvShowFragment"
+            app:destination="@id/menu_tv_show" />
+        <action
+            android:id="@+id/action_movieFragment_to_favoriteFragment"
+            app:destination="@id/menu_favorite" />
+        <action
+            android:id="@+id/action_menu_movie_to_settingsFragment"
+            app:destination="@id/menu_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_tv_show"
+        android:name="com.adewijayanto.made.defilmsapp.home.tvshow.TvShowFragment"
+        android:label="@string/list_tvshow"
+        tools:layout="@layout/fragment_tv_show">
+        <action
+            android:id="@+id/action_tvShowFragment_to_favoriteFragment"
+            app:destination="@id/menu_favorite" />
+        <action
+            android:id="@+id/action_menu_tv_show_to_settingsFragment"
+            app:destination="@id/menu_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_favorite"
+        android:name="com.adewijayanto.made.favorite.FavoriteFragment"
+        android:label="@string/favorite"
+        app:moduleName="DefilmsApp4.favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_menu_favorite_to_settingsFragment"
+            app:destination="@id/menu_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_settings"
+        android:name="com.adewijayanto.made.defilmsapp.home.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

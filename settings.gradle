@@ -1,0 +1,4 @@
+rootProject.name = "DefilmsApp5"
+include ':app'
+include ':core'
+include ':favorite'
