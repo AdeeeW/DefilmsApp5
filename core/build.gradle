@@ -20,6 +20,10 @@ android {
         buildConfigField("String", "API_KEY", ApiKey)
         buildConfigField("String", "BASE_URL", BaseUrl)
         buildConfigField("String", "IMAGE_URL", ImageUrl)
+        buildConfigField("String", "HostName", HostName)
+        buildConfigField("String", "CERT_1", CertificatePinner1)
+        buildConfigField("String", "CERT_2", CertificatePinner2)
+        buildConfigField("String", "CERT_3", CertificatePinner3)
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -32,10 +36,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
         }
-        debug{
-            minifyEnabled false
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {

@@ -45,6 +45,7 @@ class FavoriteFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        bindingFav?.viewpager?.adapter = null
         bindingFav = null
     }
 }
