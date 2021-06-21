@@ -11,15 +11,15 @@ object MapperHelper {
     fun mapResponsesMovieToEntities(input: List<ResultsMovieItem>): List<MovieCatalogueEntity> {
         val movieList = ArrayList<MovieCatalogueEntity>()
 
-        input.map { (id, overview, _, _, title, poster_path, backdrop_path, release_date, vote_average) ->
+        input.map { movie ->
             val movies = MovieCatalogueEntity(
-                id = id,
-                overview = overview,
-                title = title,
-                poster_path = poster_path,
-                backdrop_path = backdrop_path,
-                release_date = release_date,
-                vote_average = vote_average / 2,
+                id = movie.id,
+                overview = movie.overview,
+                title = movie.title,
+                poster_path = movie.poster_path,
+                backdrop_path = movie.backdrop_path,
+                release_date = movie.release_date,
+                vote_average = movie.vote_average / 2,
                 favorite = false
             )
             movieList.add(movies)
@@ -30,15 +30,15 @@ object MapperHelper {
     fun mapResponsesTvShowToEntities(input: List<ResultsTvShowItem>): List<TvShowCatalogueEntity> {
         val tvShowList = ArrayList<TvShowCatalogueEntity>()
 
-        input.map { (id, first_air_date, overview, poster_path, backdrop_path, _, vote_average, name) ->
+        input.map { tvshow ->
             val tvshows = TvShowCatalogueEntity(
-                id = id,
-                first_air_date = first_air_date,
-                overview = overview,
-                name = name,
-                poster_path = poster_path,
-                backdrop_path = backdrop_path,
-                vote_average = vote_average / 2,
+                id = tvshow.id,
+                first_air_date = tvshow.first_air_date,
+                overview = tvshow.overview,
+                name = tvshow.name,
+                poster_path = tvshow.poster_path,
+                backdrop_path = tvshow.backdrop_path,
+                vote_average = tvshow.vote_average / 2,
                 favorite = false
             )
             tvShowList.add(tvshows)
@@ -47,30 +47,30 @@ object MapperHelper {
     }
 
     fun mapEntitiesMovieToDomain(input: List<MovieCatalogueEntity>): List<Movie> =
-        input.map { (id, overview, title, poster_path, backdrop_path, release_date, vote_average, favorite) ->
+        input.map { movie ->
             Movie(
-                id = id,
-                title = title,
-                overview = overview,
-                poster_path = poster_path,
-                backdrop_path = backdrop_path,
-                release_date = release_date,
-                vote_average = vote_average,
-                favorite = favorite
+                id = movie.id,
+                title = movie.title,
+                overview = movie.overview,
+                poster_path = movie.poster_path,
+                backdrop_path = movie.backdrop_path,
+                release_date = movie.release_date,
+                vote_average = movie.vote_average,
+                favorite = movie.favorite
             )
         }
 
     fun mapEntitiesTvShowToDomain(input: List<TvShowCatalogueEntity>): List<TvShow> =
-        input.map { (id, first_air_date, overview, name, poster_path, backdrop_path, vote_average, favorite) ->
+        input.map { tvshow ->
             TvShow(
-                id = id,
-                name = name,
-                overview = overview,
-                first_air_date = first_air_date,
-                poster_path = poster_path,
-                backdrop_path = backdrop_path,
-                vote_average = vote_average,
-                favorite = favorite
+                id = tvshow.id,
+                name = tvshow.name,
+                overview = tvshow.overview,
+                first_air_date = tvshow.first_air_date,
+                poster_path = tvshow.poster_path,
+                backdrop_path = tvshow.backdrop_path,
+                vote_average = tvshow.vote_average,
+                favorite = tvshow.favorite
             )
         }
 

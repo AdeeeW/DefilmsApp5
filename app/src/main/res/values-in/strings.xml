@@ -27,6 +27,4 @@
     <string name="remove_fav_tv">Dihapus dari Acara TV Favorit</string>
     <string name="list_movie">Daftar Film</string>
     <string name="list_tvshow">Daftar Acara TV</string>
-    <string name="fab_button">fab button</string>
-    <string name="share">share</string>
 </resources>

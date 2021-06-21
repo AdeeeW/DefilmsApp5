@@ -19,11 +19,9 @@ class SpalshScreenActivity : AppCompatActivity() {
     private val binding: ActivitySpalshScreenBinding by lazy {
         ActivitySpalshScreenBinding.inflate(layoutInflater)
     }
-
-    companion object {
+    companion object{
         const val SPLASH_TIME_OUT: Long = 1000L
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.requestFeature(Window.FEATURE_NO_TITLE)
@@ -32,7 +30,7 @@ class SpalshScreenActivity : AppCompatActivity() {
 
         binding.splashLogo.visibility = View.GONE
 
-        binding.splashLottie.addAnimatorListener(object : Animator.AnimatorListener {
+        binding.splashLottie.addAnimatorListener(object : Animator.AnimatorListener{
             override fun onAnimationStart(animation: Animator?) {}
 
             override fun onAnimationEnd(animation: Animator?) {

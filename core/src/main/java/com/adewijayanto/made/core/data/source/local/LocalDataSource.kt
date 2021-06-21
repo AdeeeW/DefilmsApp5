@@ -15,12 +15,11 @@ class LocalDataSource @Inject constructor(private val catalogueDao: CatalogueDao
     fun getFavoriteTvSHow(): Flow<List<TvShowCatalogueEntity>> = catalogueDao.getFavoriteTvShow()
     fun insertAllMovie(movie: List<MovieCatalogueEntity>) = catalogueDao.insertAllMovie(movie)
     fun insertAllTvSHow(tvshow: List<TvShowCatalogueEntity>) = catalogueDao.insertAllTvShow(tvshow)
-    fun setFavoriteMovies(movieEntities: MovieCatalogueEntity, newState: Boolean) {
+    fun setFavoriteMovies(movieEntities: MovieCatalogueEntity, newState: Boolean){
         movieEntities.favorite = newState
         catalogueDao.updateMovie(movieEntities)
     }
-
-    fun setFavoriteTvShow(tvshowEntities: TvShowCatalogueEntity, newState: Boolean) {
+    fun setFavoriteTvShow(tvshowEntities: TvShowCatalogueEntity, newState: Boolean){
         tvshowEntities.favorite = newState
         catalogueDao.updateTvShow(tvshowEntities)
     }

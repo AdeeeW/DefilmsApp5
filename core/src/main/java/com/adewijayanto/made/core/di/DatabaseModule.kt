@@ -1,8 +1,5 @@
-@file:Suppress("PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType"
+@file:Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused"
 )
 
 package com.adewijayanto.made.core.di
@@ -25,15 +22,14 @@ import javax.inject.Singleton
 class DatabaseModule {
 
     private val passphrase: ByteArray = SQLiteDatabase.getBytes("defilms5".toCharArray())
-    val factory = SupportFactory(passphrase)
+    private val factory = SupportFactory(passphrase)
 
     @Singleton
     @Provides
-    fun provideDatabase(@ApplicationContext context: Context): CatalogueDatabase =
-        Room.databaseBuilder(
-            context,
-            CatalogueDatabase::class.java, "Catalogue.db"
-        ).allowMainThreadQueries().openHelperFactory(factory).build()
+    fun provideDatabase(@ApplicationContext context: Context): CatalogueDatabase = Room.databaseBuilder(
+        context,
+        CatalogueDatabase::class.java, "Catalogue.db"
+    ).allowMainThreadQueries().openHelperFactory(factory).build()
 
     @Provides
     fun provideCatalogDatabaseDao(database: CatalogueDatabase): CatalogueDao =

@@ -1,3 +1,5 @@
+@file:Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused")
+
 package com.adewijayanto.made.defilmsapp.di
 
 import com.adewijayanto.made.core.domain.usecase.CatalogueUseCase

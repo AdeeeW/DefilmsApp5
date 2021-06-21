@@ -7,6 +7,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class FavTvShowViewModel @Inject constructor(catalogueUseCase: CatalogueUseCase) : ViewModel() {
+class FavTvShowViewModel @Inject constructor(catalogueUseCase: CatalogueUseCase): ViewModel() {
     val favTvShow = catalogueUseCase.getFavoriteTvShow().asLiveData()
 }

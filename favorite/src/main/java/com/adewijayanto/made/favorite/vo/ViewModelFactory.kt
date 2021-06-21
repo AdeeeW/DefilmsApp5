@@ -9,10 +9,9 @@ import com.adewijayanto.made.favorite.ui.movie.FavMovieViewModel
 import com.adewijayanto.made.favorite.ui.tvshow.FavTvShowViewModel
 import javax.inject.Inject
 
-class ViewModelFactory @Inject constructor(private val catalogueUseCase: CatalogueUseCase) :
-    ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory @Inject constructor(private val catalogueUseCase: CatalogueUseCase): ViewModelProvider.NewInstanceFactory() {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T =
-        when {
+        when{
             modelClass.isAssignableFrom(FavMovieViewModel::class.java) -> {
                 FavMovieViewModel(catalogueUseCase) as T
             }

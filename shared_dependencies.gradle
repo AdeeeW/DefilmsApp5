@@ -33,7 +33,6 @@ dependencies {
 
     // leakcanary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_version"
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 
     //encryption
     implementation "net.zetetic:android-database-sqlcipher:$sqlcipher_version"

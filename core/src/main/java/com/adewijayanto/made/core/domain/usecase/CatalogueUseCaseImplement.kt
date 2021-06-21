@@ -1,12 +1,3 @@
-@file:Suppress("PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
-    "PublicApiImplicitType"
-)
-
 package com.adewijayanto.made.core.domain.usecase
 
 import com.adewijayanto.made.core.domain.model.Movie
@@ -23,7 +14,6 @@ class CatalogueUseCaseImplement @Inject constructor(private val ICatalogueReposi
     override fun setFavoriteMovie(movie: Movie, state: Boolean) {
         return ICatalogueRepository.setFavoriteMovie(movie, state)
     }
-
     override fun setFavoriteTvShow(tvshow: TvShow, state: Boolean) {
         return ICatalogueRepository.setFavoriteTvShow(tvshow, state)
     }

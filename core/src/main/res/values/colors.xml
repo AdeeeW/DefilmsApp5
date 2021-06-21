@@ -8,9 +8,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="placeholder">#6FB6B6B6</color>
     <color name="light_blue">#2962ff</color>
-    <color name="red">#FA0000</color>
     <color name="blue">#0039cb</color>
     <color name="dark_blue">#051226</color>
-    <color name="dark_navy">#010811</color>
+    <color name="dark_navy">#001735</color>
     <color name="yellow">#FFAF00</color>
 </resources>
