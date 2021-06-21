@@ -14,7 +14,7 @@
         android:roundIcon="@drawable/logo_d"
         android:supportsRtl="true"
         android:theme="@style/Theme.DefilmsApp4"
-        tools:ignore="GoogleAppIndexingWarning,ManifestResource"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,ManifestResource"
         tools:replace="android:appComponentFactory"
         tools:targetApi="p">
         <activity android:name=".detail.DetailActivity"

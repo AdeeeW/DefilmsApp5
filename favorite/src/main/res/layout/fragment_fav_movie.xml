@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        tools:listitem="@layout/list_item" />
+        tools:listitem="@layout/list_item"
+        tools:ignore="UnusedIds" />
 
     <ProgressBar
         android:id="@+id/pb_movie"
@@ -19,7 +20,8 @@
         android:layout_centerInParent="true"
         android:indeterminateTint="@color/light_blue"
         android:visibility="gone"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        tools:ignore="UnusedIds" />
 
     <ImageView
         android:id="@+id/img_error_fav"
@@ -28,7 +30,8 @@
         android:layout_centerInParent="true"
         android:contentDescription="@string/image_error_fav"
         android:src="@drawable/error"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:ignore="UnusedIds" />
 
     <TextView
         android:id="@+id/text_error_fav"
@@ -41,7 +44,8 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:ignore="UnusedIds" />
 
 
 </RelativeLayout>

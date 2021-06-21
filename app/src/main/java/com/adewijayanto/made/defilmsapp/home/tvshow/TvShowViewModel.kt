@@ -7,6 +7,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class TvShowViewModel @Inject constructor(catalogueUseCase: CatalogueUseCase): ViewModel() {
+class TvShowViewModel @Inject constructor(catalogueUseCase: CatalogueUseCase) : ViewModel() {
     val tvshow = catalogueUseCase.getTvShow().asLiveData()
 }

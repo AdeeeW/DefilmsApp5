@@ -1,7 +1,3 @@
-@file:Suppress("KotlinDeprecation", "KotlinDeprecation", "KotlinDeprecation", "KotlinDeprecation",
-    "KotlinDeprecation", "KotlinDeprecation", "RedundantNullableReturnType"
-)
-
 package com.adewijayanto.made.defilmsapp.home.movie
 
 import android.content.Intent
@@ -32,9 +28,9 @@ class MovieFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentMovieBinding.inflate(inflater, container, false)
-        return binding?.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -70,21 +66,19 @@ class MovieFragment : Fragment() {
                 }
             }
 
-            binding?.let {
-                with(it.rvMovie) {
-                    layoutManager = LinearLayoutManager(context)
-                    setHasFixedSize(true)
-                    adapter = movieAdapter
-                }
+            with(binding.rvMovie) {
+                layoutManager = LinearLayoutManager(context)
+                setHasFixedSize(true)
+                adapter = movieAdapter
             }
         }
     }
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            binding?.pbMovie?.visibility = View.VISIBLE
+            binding.pbMovie.visibility = View.VISIBLE
         } else {
-            binding?.pbMovie?.visibility = View.GONE
+            binding.pbMovie.visibility = View.GONE
         }
     }
 

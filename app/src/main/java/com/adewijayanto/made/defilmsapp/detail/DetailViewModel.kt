@@ -8,7 +8,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class DetailViewModel @Inject constructor(private val catalogueUseCase: CatalogueUseCase): ViewModel() {
-    fun setFavoriteMovies(movies: Movie, state: Boolean) = catalogueUseCase.setFavoriteMovie(movies, state)
-    fun setFavoriteTvShow(tvshow: TvShow, state: Boolean) = catalogueUseCase.setFavoriteTvShow(tvshow, state)
+class DetailViewModel @Inject constructor(private val catalogueUseCase: CatalogueUseCase) :
+    ViewModel() {
+    fun setFavoriteMovies(movies: Movie, state: Boolean) =
+        catalogueUseCase.setFavoriteMovie(movies, state)
+
+    fun setFavoriteTvShow(tvshow: TvShow, state: Boolean) =
+        catalogueUseCase.setFavoriteTvShow(tvshow, state)
 }

@@ -15,14 +15,15 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
+@Suppress("UNCHECKED_CAST")
 @Singleton
 class CatalogRepository @Inject constructor(
     private val localDataSource: LocalDataSource,
     private val remoteDataSource: RemoteDataSource,
     private val appExecutors: AppExecutors
-): ICatalogueRepository {
+) : ICatalogueRepository {
     override fun getMovie(): Flow<Resources<List<Movie>>> {
-        return object : NetworkResourceBound<List<Movie>, List<ResultsMovieItem>>(){
+        return object : NetworkResourceBound<List<Movie>, List<ResultsMovieItem>>() {
             override fun loadFromDB(): Flow<List<Movie>> {
                 return localDataSource.getAllMovie().map {
                     MapperHelper.mapEntitiesMovieToDomain(it)
@@ -45,7 +46,7 @@ class CatalogRepository @Inject constructor(
     }
 
     override fun getTvShow(): Flow<Resources<List<TvShow>>> {
-        return object : NetworkResourceBound<List<TvShow>, List<ResultsTvShowItem>>(){
+        return object : NetworkResourceBound<List<TvShow>, List<ResultsTvShowItem>>() {
             override fun loadFromDB(): Flow<List<TvShow>> {
                 return localDataSource.getAllTvSHow().map {
                     MapperHelper.mapEntitiesTvShowToDomain(it)

@@ -24,9 +24,13 @@ class FavMovieFragment : Fragment() {
 
     @Inject
     lateinit var factoryViewModel: ViewModelFactory
-    private val favoritesMovieViewModel: FavMovieViewModel by viewModels {factoryViewModel}
+    private val favoritesMovieViewModel: FavMovieViewModel by viewModels { factoryViewModel }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         bindingFavMovie = FragmentFavMovieBinding.inflate(inflater, container, false)
         return bindingFavMovie?.root
     }
@@ -45,7 +49,7 @@ class FavMovieFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
 
-        if (activity != null){
+        if (activity != null) {
 
             val favoriteMovieAdapter = ListMovieAdapter()
             favoriteMovieAdapter.onItemClick = {
@@ -66,7 +70,7 @@ class FavMovieFragment : Fragment() {
             }
 
             bindingFavMovie?.let {
-                with(it.rvMovie){
+                with(it.rvMovie) {
                     layoutManager = LinearLayoutManager(context)
                     setHasFixedSize(true)
                     adapter = favoriteMovieAdapter
@@ -75,8 +79,8 @@ class FavMovieFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         bindingFavMovie = null
     }
 }

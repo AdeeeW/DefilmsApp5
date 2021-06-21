@@ -1,3 +1,10 @@
+@file:Suppress("PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
+    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
+    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
+    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType",
+    "PublicApiImplicitType", "PublicApiImplicitType", "PublicApiImplicitType"
+)
+
 package com.adewijayanto.made.core.di
 
 import android.content.Context
@@ -22,10 +29,11 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun provideDatabase(@ApplicationContext context: Context): CatalogueDatabase = Room.databaseBuilder(
-        context,
-        CatalogueDatabase::class.java, "Catalogue.db"
-    ).allowMainThreadQueries().openHelperFactory(factory).build()
+    fun provideDatabase(@ApplicationContext context: Context): CatalogueDatabase =
+        Room.databaseBuilder(
+            context,
+            CatalogueDatabase::class.java, "Catalogue.db"
+        ).allowMainThreadQueries().openHelperFactory(factory).build()
 
     @Provides
     fun provideCatalogDatabaseDao(database: CatalogueDatabase): CatalogueDao =

@@ -14,7 +14,7 @@ interface FavoriteComponent {
     fun inject(favTvshowFragment: FavTvshowFragment)
 
     @Component.Builder
-    interface Builder{
+    interface Builder {
         fun context(@BindsInstance context: Context): Builder
         fun appDependencies(favoritesDependencies: FavoritesDependencies): Builder
         fun build(): FavoriteComponent

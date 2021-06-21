@@ -1,4 +1,4 @@
-@file:Suppress("unused")
+@file:Suppress("unused", "unused")
 
 package com.adewijayanto.made.core.utils
 
@@ -14,12 +14,12 @@ class AppExecutors @VisibleForTesting constructor(
     private val networkIO: Executor,
     private val mainThread: Executor
 ) {
-    companion object{
+    companion object {
         private const val THREAD_COUNT = 3
     }
 
     @Inject
-    constructor(): this(
+    constructor() : this(
         Executors.newSingleThreadExecutor(),
         Executors.newFixedThreadPool(THREAD_COUNT),
         MainThreadExecutor()
@@ -31,7 +31,7 @@ class AppExecutors @VisibleForTesting constructor(
 
     fun mainThread(): Executor = mainThread
 
-    private class MainThreadExecutor: Executor{
+    private class MainThreadExecutor : Executor {
         private val mainThreadHandler = Handler(Looper.getMainLooper())
 
         override fun execute(command: Runnable) {

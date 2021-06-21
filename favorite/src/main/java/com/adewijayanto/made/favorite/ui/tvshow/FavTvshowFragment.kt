@@ -79,8 +79,8 @@ class FavTvshowFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         bindingFavTvShow = null
     }
 }

@@ -24,11 +24,11 @@ class NetworkModule {
         .build()
 
     @Provides
-    fun provideOkHttpClient(): OkHttpClient{
+    fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(120, TimeUnit.SECONDS)
-            .readTimeout(120,TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
             .certificatePinner(certificatePinner)
             .build()
     }

@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
             R.id.menu_settings
         ).build()
 
-        setupActionBarWithNavController(mController!!, appBarConfiguration)
+        setupActionBarWithNavController(mController ?: return, appBarConfiguration)
         activityMainBinding.apply {
-            navButton.setupWithNavController(mController!!)
+            navButton.setupWithNavController(mController ?: return@apply)
         }
     }
 }

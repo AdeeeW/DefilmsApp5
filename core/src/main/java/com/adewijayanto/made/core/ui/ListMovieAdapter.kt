@@ -13,11 +13,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 @Suppress("DEPRECATION")
-class ListMovieAdapter: RecyclerView.Adapter<ListMovieAdapter.MovieViewHolder>() {
+class ListMovieAdapter : RecyclerView.Adapter<ListMovieAdapter.MovieViewHolder>() {
     private var listDataMovie = ArrayList<Movie>()
     var onItemClick: ((Movie) -> Unit)? = null
 
-    companion object{
+    companion object {
         const val TAG = "ADAPTER"
     }
 
@@ -29,7 +29,9 @@ class ListMovieAdapter: RecyclerView.Adapter<ListMovieAdapter.MovieViewHolder>()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder =
-        MovieViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false))
+        MovieViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+        )
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         val data = listDataMovie[position]
@@ -40,13 +42,15 @@ class ListMovieAdapter: RecyclerView.Adapter<ListMovieAdapter.MovieViewHolder>()
 
     inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ListItemBinding.bind(itemView)
-        fun bind(movie: Movie){
+        fun bind(movie: Movie) {
             val poster = StringBuilder("$IMAGE_URL${movie.poster_path}").toString()
             with(binding) {
                 Glide.with(itemView.context)
                     .load(poster)
-                    .apply(RequestOptions.placeholderOf(R.drawable.ic_loading)
-                        .error(R.drawable.ic_error))
+                    .apply(
+                        RequestOptions.placeholderOf(R.drawable.ic_loading)
+                            .error(R.drawable.ic_error)
+                    )
                     .centerCrop()
                     .into(imgPoster)
                 Log.d(TAG, movie.release_date)
