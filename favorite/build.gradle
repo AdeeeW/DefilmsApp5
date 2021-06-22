@@ -26,15 +26,6 @@ android {
         abortOnError = false
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-        debug{
-            minifyEnabled false
-        }
-    }
-
     buildFeatures {
         viewBinding = true
     }
@@ -49,7 +40,7 @@ repositories {
 dependencies {
     implementation project(":app")
     implementation project(":core")
-    //noinspection GradleDependency
+    //noinspection NewerVersionAvailable,GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 

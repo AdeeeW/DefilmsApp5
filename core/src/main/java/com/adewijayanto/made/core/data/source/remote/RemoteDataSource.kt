@@ -24,6 +24,7 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
             try {
                 val response = apiService.getMovies()
                 val movie = response.results
+                Log.d(TAG,"${response.results}")
                 if (movie.isNotEmpty()) {
                     emit(ApiResponse.Success(response.results))
                 } else {
@@ -41,6 +42,7 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
             try {
                 val response = apiService.getTvShows()
                 val tvshow = response.results
+                Log.d(TAG,"${response.results}")
                 if (tvshow.isNotEmpty()) {
                     emit(ApiResponse.Success(response.results))
                 } else {
