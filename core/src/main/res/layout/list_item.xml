@@ -1,99 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_list"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/rl_list"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp">
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="10dp"
-                android:elevation="30dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="115dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/tv_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title"
-                            android:fontFamily="@font/roboto"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:ellipsize="end"
-                            android:maxLines="2"
-                            android:textAlignment="viewStart"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:id="@+id/tv_deskripsi"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/description"
-                            android:fontFamily="@font/roboto"
-                            android:textSize="13sp"
-                            android:ellipsize="end"
-                            android:maxLines="2"
-                            android:textAlignment="viewStart"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="5dp"/>
-                        <RatingBar
-                            android:id="@+id/bar_rating"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:progressTint="@color/yellow"
-                            android:layout_marginTop="5dp"
-                            style="@style/Widget.AppCompat.RatingBar.Small"/>
-                        <TextView
-                            android:id="@+id/tv_date"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/date_releas"
-                            android:fontFamily="@font/roboto"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
-                            android:layout_gravity="bottom|end"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:padding="5dp"
-                            android:background="@drawable/bg_date_releas"/>
-                    </LinearLayout>
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="start|center"
-            android:layout_marginStart="0dp"
-            android:layout_marginBottom="-17dp">
-            <ImageView
-                android:id="@+id/img_poster"
-                android:layout_width="120dp"
-                android:layout_height="190dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="10dp"
-                android:scaleType="fitCenter"/>
-        </LinearLayout>
-    </FrameLayout>
+            android:layout_margin="5dp"
+            android:elevation="30dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp">
 
-</RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="115dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto"
+                        android:maxLines="2"
+                        android:text="@string/title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_deskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto"
+                        android:maxLines="2"
+                        android:text="@string/description"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <RatingBar
+                        android:id="@+id/bar_rating"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:progressTint="@color/yellow" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/bg_date_releas"
+                        android:fontFamily="@font/roboto"
+                        android:padding="5dp"
+                        android:text="@string/date_releas"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="-17dp"
+        android:gravity="start|center"
+        tools:ignore="NegativeMargin">
+
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="120dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/img_poster" />
+    </LinearLayout>
+</FrameLayout>

@@ -53,22 +53,21 @@
                     android:id="@+id/btn_favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
                     android:layout_gravity="right|bottom"
                     android:layout_margin="16dp"
                     android:contentDescription="@string/fab_button"
                     android:focusable="true"
                     android:src="@drawable/ic_favorite_border"
                     app:backgroundTint="@color/white"
-                    app:tint="@color/red" />
+                    app:tint="@color/red"
+                    tools:ignore="RtlHardcoded" />
             </FrameLayout>
 
             <TextView
                 android:id="@+id/title_movie"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="76dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/title_film"
@@ -84,7 +83,7 @@
                 android:id="@+id/tv_detail_judul"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="96dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/title_film"
@@ -99,7 +98,7 @@
                 android:id="@+id/title_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="76dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/title_tv_show"
@@ -222,7 +221,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_detail_deskripsi"
                 app:layout_constraintVertical_bias="0.988"
                 app:srcCompat="@drawable/ic_share"
-                app:tint="@color/white" />
+                app:tint="@color/white"
+                android:contentDescription="@string/btn_share" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ProgressBar

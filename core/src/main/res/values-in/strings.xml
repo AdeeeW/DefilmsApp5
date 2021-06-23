@@ -3,4 +3,5 @@
     <string name="date_releas">Tanggal Rilis</string>
     <string name="description">Deskripsi</string>
     <string name="title">Judul</string>
+    <string name="img_poster">img_poster</string>
 </resources>

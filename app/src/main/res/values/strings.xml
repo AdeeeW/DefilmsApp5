@@ -5,12 +5,10 @@
     <string name="settings_language">Settings Languages</string>
     <string name="title_film">Title Movie</string>
     <string name="rating">Rating</string>
-    <string name="language">Language</string>
     <string name="date_releas">Date Releas</string>
     <string name="description">Description</string>
     <string name="first_releas">First Releas</string>
     <string name="title_tv_show">Title Tv Show</string>
-    <string name="title">Title</string>
     <string name="movie">Movie</string>
     <string name="tv_show">Tv Show</string>
     <string name="favorite">Favorite</string>
@@ -24,4 +22,5 @@
     <string name="list_movie">List Movie</string>
     <string name="list_tvshow">List Tv Show</string>
     <string name="fab_button" translatable="false">fab button</string>
+    <string name="btn_share">btn_share</string>
 </resources>
